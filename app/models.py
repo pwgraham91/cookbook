@@ -43,12 +43,18 @@ class User(db.Model):
             'created_at': str(self.created_at) if self.created_at else None,
         }
 
+    def __repr__(self):
+        return "{}: {}".format(self.id, self.name)
+
 
 class Ingredient(db.Model):
     id = db.Column(db.BigInteger, primary_key=True)
 
     name = db.Column(db.String(120), nullable=False)
     image_url = db.Column(db.VARCHAR)
+
+    def __repr__(self):
+        return "{}: {}".format(self.id, self.name)
 
 
 class Unit(IntEnum):
@@ -69,6 +75,9 @@ class IngredientStock(db.Model):
 
     user_id = db.Column(db.BigInteger, db.ForeignKey('user.id', ondelete="CASCADE"), nullable=False)
     user = db.relationship("User", backref="whole_stock")
+
+    def __repr__(self):
+        return self.id
 
 
 class Recipe(db.Model):

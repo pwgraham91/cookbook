@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 
 from app import app, db
 from app.lib.user_lib import create_user
-from app.models import User
+from app.models import User, Ingredient
 from test_config import SQLALCHEMY_TEST_DATABASE_URI
 
 
@@ -38,3 +38,10 @@ class BaseTestCase(unittest.TestCase):
         })
 
         return user
+
+    @staticmethod
+    def get_test_ingredient(name=None):
+        ingredient = Ingredient()
+        ingredient.name = name or uuid.uuid4()
+
+        return ingredient
