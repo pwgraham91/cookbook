@@ -4,7 +4,7 @@ import uuid
 from sqlalchemy.orm import Session
 
 from app import app, db
-from app.lib.user_lib import create_user
+from app.libs.user_lib import create_user
 from app.models import User, Ingredient
 from test_config import SQLALCHEMY_TEST_DATABASE_URI
 

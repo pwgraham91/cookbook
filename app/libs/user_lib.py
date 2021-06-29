@@ -5,7 +5,7 @@ from sqlalchemy import func
 from sqlalchemy.orm import Session
 from werkzeug.security import generate_password_hash
 
-from app.lib.model_lib import ModelSetRequiredFieldException, set_property_on_model
+from app.libs.model_lib import ModelSetRequiredFieldException, set_property_on_model
 from app.models import User
 
 

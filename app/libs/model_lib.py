@@ -1,4 +1,4 @@
-from app.lib.exception_lib import DeveloperException
+from app.libs.exception_lib import DeveloperException
 
 
 class ModelSetRequiredFieldException(DeveloperException):

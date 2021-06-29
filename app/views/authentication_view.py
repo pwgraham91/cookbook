@@ -5,8 +5,8 @@ from sqlalchemy.exc import IntegrityError
 from werkzeug.security import check_password_hash
 
 from app import app, db
-from app.lib.model_lib import ModelSetRequiredFieldException
-from app.lib.user_lib import create_user, get_user_by_email
+from app.libs.model_lib import ModelSetRequiredFieldException
+from app.libs.user_lib import create_user, get_user_by_email
 
 
 @app.route('/login', methods=['POST'])

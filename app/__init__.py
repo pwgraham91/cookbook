@@ -3,7 +3,7 @@ from flask_jwt_extended import JWTManager
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 
-from app.lib.logging_lib import init_logs, set_rotating_logs
+from app.libs.logging_lib import init_logs, set_rotating_logs
 
 app = Flask(__name__)
 app.config.from_object('config')
